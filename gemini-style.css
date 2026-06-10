@@ -1,0 +1,981 @@
+/* ==========================================================================
+   0.0 GLOBAL ARCHITECTURE BASE CONFIGURATION RESET & LUXURY SYSTEMS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0b0c10; /* Deep obsidian luxury culinary black base */
+    color: #f3f4f6; /* Off-white highly readable copy text */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   START SECTION 1.1: STICKY CULINARY NAVIGATION HEADER WITH INTERACTIVE MENU BAR
+   ========================================================================== */
+
+/* 1.1 Main Layout Global Parent: Sticky positional lock tracks viewport coordinates */
+.mamaput-header-global {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column; /* Cleanly stacks the upper branding row and lower red menu bar */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* 1.1.1 Header Top Row: Containment bounds for corporate identity and search text box */
+.header-top-row {
+    width: 100%;
+    background: #0b0c10;
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.header-top-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Presentation Links */
+.logo-anchor-link {
+    text-decoration: none;
+}
+
+.logo-main-text {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* Traditional rich culinary gold accent text tone representing elite gastronomy */
+.logo-glow-accent {
+    color: #d4af37;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Interactive Search Window Text Input Wrapper */
+.mamaput-search-block {
+    width: 100%;
+    max-width: 360px;
+}
+
+.search-form-matrix {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.search-window-input {
+    width: 100%;
+    background: #12131c; /* Slightly elevated charcoal background layer contrast */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.7rem 3rem 0.7rem 1.25rem;
+    border-radius: 50px; /* Symmetrical pill shape border bounds */
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Visual focus border transition feedback tracking */
+.search-window-input:focus {
+    outline: none;
+    border-color: #d4af37;
+    background: #161722;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.btn-search-submit {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.btn-search-submit:hover {
+    color: #d4af37;
+}
+
+.search-icon-svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* 1.1.2 Lower Menu Bar Component Row: High impact premium dark red background block */
+.header-menu-bar-row {
+    width: 100%;
+    background: #7a0c0c; /* Luxurious, deep dark pepper-red background color tint */
+    padding: 0.65rem 2rem;
+    border-bottom: 2px solid #5a0808; /* Darker secondary structural underline base border shadow */
+}
+
+.menu-bar-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* Aligns links seamlessly leftward on desktop viewports */
+}
+
+/* Navigation Links List Matrix row flex alignments */
+.mamaput-menu-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    align-items: center;
+}
+
+.menu-item-link {
+    text-decoration: none;
+    color: #f3f4f6; /* High contrast off-white text readability over deep red space */
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.4rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover or active current file tracker highlighter action state toggles */
+.menu-item-link:hover,
+.menu-item-link.active {
+    color: #d4af37; /* Pops into rich palm-oil gold text on hover for elite readability */
+}
+
+/* Pure CSS micro underline sliding transition effect */
+.menu-item-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #d4af37;
+    box-shadow: 0 0 8px #d4af37;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu-item-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADAPTIVE MOBILE BREAKPOINTS OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-top-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .mamaput-search-block {
+        max-width: 100%;
+    }
+    
+    .menu-bar-wrapper {
+        justify-content: center; /* Centers item links list loops evenly on mobile view screens */
+    }
+    
+    .mamaput-menu-links {
+        gap: 1.5rem;
+    }
+    
+    .menu-item-link {
+        font-size: 0.82rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* ==========================================================================
+   END SECTION 1.1: STICKY CULINARY NAVIGATION HEADER
+   ========================================================================== */
+   /* ==========================================================================
+   START SECTION 1.2: CINEMATIC CULINARY HERO SHOWCASE (VERTICALLY PARTITIONED)
+   ========================================================================== */
+
+/* 1.2 Main Section Root Container Frame Rules */
+.mamaput-hero-container {
+    min-height: 65vh; /* Comfortably occupies over 30% of vertical length layout bounds */
+    width: 100%;      /* Spans full 100% breadth width across the page environment */
+    background: #07080b; /* Deepened obsidian base contrast line separator */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Vertically Partitioned Split Structural Grid Engine Base */
+.hero-split-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr; /* Clean dual side-by-side vertical split boundaries layout line */
+    gap: 4rem;
+    align-items: center;
+}
+
+/* 1.2.1 Left Panel Typography Content Layout Elements */
+.hero-text-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.hero-mini-badge {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ef4444; /* Pepper-red culinary badge alert indicator */
+    background: rgba(239, 68, 68, 0.08);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+/* Large bold print presentation typography */
+.hero-main-headline {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.15;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+}
+
+.gold-gradient-text {
+    background: linear-gradient(135deg, #d4af37 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+}
+
+.hero-subtext-narrative {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #9ca3af;
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+}
+
+/* 1.2.1.1 Call-To-Action Button Component Shape */
+.btn-order-now {
+    text-decoration: none;
+    display: inline-block;
+    background: linear-gradient(135deg, #7a0c0c 0%, #ef4444 100%); /* Hot pepper red action gradient */
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    border-radius: 50px; /* Completely smooth curve pill shape */
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-order-now:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.45), 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* 1.2.2 Right Panel Media Canvas Architecture */
+.hero-image-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.culinary-image-viewport {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 1 / 1; /* Perfect square matrix configuration ensures zero image distort stretching */
+    border-radius: 16px;
+    overflow: hidden; /* Clean borders clipping mask protection */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    background: #12131c;
+}
+
+/* High-pixelization, correct aspect ratio scaling rules */
+.culinary-presentation-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Retains sharp native pixels depth proportions */
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Micro interaction zoom response on container image focus */
+.culinary-image-viewport:hover .culinary-presentation-img {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* Ambient shadow border edge smoothing vignette mask */
+.image-vignette-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(11, 12, 16, 0.4) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* 1.2.2.3 Pure CSS Floating Steam Heat Haze Simulation Layer Overlay */
+.steam-simulation-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.01) 100%);
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    
+    /* Continuous soft twist animation representing appetizing rising heat steam */
+    animation: localSteamHaze 4s ease-in-out infinite alternate;
+}
+
+/* ==========================================================================
+   PURE CSS KEYFRAMES MOTOR ENGINE TRANSFORMS
+   ========================================================================== */
+@keyframes localSteamHaze {
+    0% { transform: translateY(5px) scaleX(1) blur(1px); opacity: 0.6; }
+    100% { transform: translateY(-5px) scaleX(1.05) blur(2px); opacity: 0.9; }
+}
+
+/* ==========================================================================
+   RESPONSIVE ADAPTIVE MOBILE BREAKPOINTS OVERRIDES
+   ========================================================================== */
+@media (max-width: 968px) {
+    .hero-split-wrapper {
+        grid-template-columns: 1fr; /* Forces partitioned splits down into single scrolling linear stack rows */
+        gap: 3.5rem;
+        text-align: center;
+    }
+    
+    .hero-text-panel {
+        align-items: center;
+    }
+    
+    .hero-main-headline {
+        font-size: 2.3rem;
+    }
+    
+    .culinary-image-viewport {
+        max-width: 360px; /* Safe mobile scale constraints tracking dimensions metrics */
+    }
+}
+
+/* ==========================================================================
+   END SECTION 1.2: CINEMATIC CULINARY HERO SHOWCASE
+   ========================================================================== */
+
+   /* ==========================================================================
+   3.0 SECTION 1.3: PRODUCTS GRID DISPLAY SYSTEM (3-ROW PANEL GRID MATRIX)
+   ========================================================================== */
+
+/* 3.1 Main Section Outer Padding Containers */
+.mamaput-products-container {
+    padding: 6rem 2rem;
+    background: #0b0c10;
+    width: 100%;
+    position: relative;
+}
+
+/* Structural Side-Panel Layout Flex Wrapper */
+.products-panel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Rigid sidebar layout on left, dynamic grids mapping on right */
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Left Sidebar Component Presentation Panel */
+.products-sidebar-panel {
+    position: sticky;
+    top: calc(110px + 2rem); /* Dynamic anchor calculation locks sidebar neatly below sticky header bar */
+    background: transparent;
+}
+
+.sticky-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar-accent-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.sidebar-main-heading {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.5px;
+}
+
+.sidebar-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #8a8f98;
+    margin-bottom: 2.5rem;
+}
+
+.sidebar-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.sidebar-anchor {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.25rem 0;
+}
+
+.sidebar-anchor:hover,
+.sidebar-anchor.active-anchor {
+    color: #7a0c0c; /* High contrast active pepper red track selector link */
+    padding-left: 6px;
+}
+
+/* Right Panel: Enforces three distinct rows architectural matrix */
+.products-display-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; /* Wide vertical buffer space segregating different food classifications */
+}
+
+.product-row-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.row-classification-heading {
+    font-family: monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding-bottom: 0.75rem;
+}
+
+/* Strict Quadruple 4-Column Layout Grid Framework per Row */
+.product-quad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Generates exactly 4 horizontal product cards per panel row line */
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Individual Product Card Shell Structure Packaging */
+.food-product-card {
+    background: #11121a; /* Elevated dark card contrast texture backing */
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    overflow: hidden; /* Clips micro-zooms cleanly to protect grid line layouts alignment */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 320px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-product-card:hover {
+    border-color: rgba(212, 175, 55, 0.2); /* Soft palm-oil gold ambient ring highlight */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 3.2 Pure CSS Clean Hover-Scale Zoom Animations Component Engine */
+.food-img-placeholder {
+    width: 100%;
+    height: 140px; /* Uniform landscape frame rectangle bounds */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Micro-Hover zoom trigger action link scales food asset upwards */
+.food-product-card:hover .food-img-placeholder {
+    transform: scale(1.05); /* Clean cinematic scale dilation */
+}
+
+/* Traditional Price Badge Design Tag overlay mapping */
+.price-badge {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background: #7a0c0c; /* Deep pepper red solid background mask */
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.3rem 0.65rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 5;
+}
+
+/* Internal text stack descriptive details content padding */
+.food-card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1; /* Pushes layout fields to line up evenly across varying text boxes lengths */
+}
+
+.food-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.food-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #8a8f98; /* Mid grey visibility ratio reading standard text */
+}
+
+/* Fallback Unsplash traditional food asset textures headers anchors mapping */
+.cover-egusi       { background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://unsplash.com'); }
+.cover-edikaikong  { background: linear-gradient(135deg, #0f2a1d, #05140e); }
+.cover-ewedu       { background: linear-gradient(135deg, #1c2e15, #0a1407); }
+.cover-ora         { background: linear-gradient(135deg, #2b2512, #141005); }
+.cover-jollof      { background: linear-gradient(135deg, #420b0b, #1f0303); }
+.cover-friedrice   { background: linear-gradient(135deg, #212c11, #0f1406); }
+.cover-yam         { background: linear-gradient(135deg, #382412, #1c1005); }
+.cover-beans       { background: linear-gradient(135deg, #291c14, #120a06); }
+.cover-nkwobi      { background: linear-gradient(135deg, #3b3010, #1a1505); }
+.cover-abacha      { background: linear-gradient(135deg, #18262b, #091114); }
+.cover-chicken     { background: linear-gradient(135deg, #3d2112, #1f0f07); }
+.cover-kpomo       { background: linear-gradient(135deg, #2e1026, #140510); }
+
+/* ==========================================================================
+   3.3 RESPONSIVE ADAPTIVE MOBILE OVERRIDES ENGINE CODES
+   ========================================================================== */
+@media (max-width: 1120px) {
+    /* Compresses the quad layout grid row to 2 columns on medium tablet settings dimensions */
+    .product-quad-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 864px) {
+    /* Folds layout from multi-panel dashboard into linear singular stack feeds channel */
+    .products-panel-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .products-sidebar-panel {
+        position: static;
+        text-align: center;
+    }
+    .sticky-sidebar-content {
+        align-items: center;
+    }
+    .sidebar-nav-links {
+        flex-direction: row; /* Arranges categories links horizontally on tablets formats */
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .product-quad-grid {
+        grid-template-columns: 1fr; /* Absolute vertical 1-column compression stream on small screens */
+    }
+    .mamaput-products-container {
+        padding: 4rem 1rem;
+    }
+}
+/* ==========================================================================
+   4.0 SECTION 1.4: MAMA PUT ONLINE SERVICES REPERTOIRE GRID
+   ========================================================================== */
+
+/* 4.1 Main Services Layout Boundary Container Padding Rules */
+.mamaput-services-container {
+    padding: 6rem 2rem 8rem 2rem;
+    background: #07080b; /* Alternates to darker background base separating section streams cleanly */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Centered Layout Header Identification Area */
+.services-header-block {
+    text-align: center;
+    margin-bottom: 5rem;
+    width: 100%;
+}
+
+.services-badge-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ef4444; /* Pepper-red visual attribute designation label */
+    background: rgba(239, 68, 68, 0.08);
+    padding: 0.4rem 1.1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    margin-bottom: 1.25rem;
+    display: inline-block;
+}
+
+.services-main-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.services-underline-bar {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #d4af37 0%, #ef4444 100%); /* Gold into red culinary gradient blend line */
+    border-radius: 50px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* 4.2 Triple Split-Axis 3-Column Layout Grid Framework */
+.services-grid-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forms accurate triple split row alignments line */
+    gap: 2.5rem; /* Spacious card insulation padding buffers */
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Individual Culinary Service Highlights Packaging Cards */
+.culinary-service-card {
+    background: #11121a; /* Elevated dark card contrast texture frame box */
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 4.2.1 Pure CSS Smooth Hover-Scale Zoom & Lift Actions Animations Engine */
+.culinary-service-card:hover {
+    transform: translateY(-6px); /* Displaces card upward away from background grid coordinate lines */
+    border-color: rgba(212, 175, 55, 0.25); /* Lights up custom palm-oil gold focus indicator */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(212, 175, 55, 0.03);
+}
+
+/* Vector Inline Icon Viewport Container */
+.service-icon-box {
+    width: 48px;
+    height: 48px;
+    color: #d4af37; /* Traditional rich culinary gold fallback vector tone */
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Micro-hover animation rotates icon slightly inside container bounds */
+.culinary-service-card:hover .service-icon-box {
+    transform: scale(1.1) rotate(6deg);
+    color: #ef4444; /* Swaps gold icon color to hot pepper red on hover trigger node */
+}
+
+.icon-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Typography Layer: Card title configurations elements */
+.service-card-heading {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.2px;
+}
+
+/* Typography Layer: Card details narrative description block elements */
+.service-card-details {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #8a8f98; /* Mid grey legibility standard tracking ratio fonts */
+}
+
+/* ==========================================================================
+   4.3 RESPONSIVE ADAPTIVE MOBILE OVERRIDES ENGINE CODES
+   ========================================================================== */
+@media (max-width: 968px) {
+    .services-grid-matrix {
+        grid-template-columns: repeat(2, 1fr); /* Tablet scale down to neat dual structural column splits mapping grids */
+        gap: 1.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .services-grid-matrix {
+        grid-template-columns: 1fr; /* Mobile phone screen line compression down to singular flowing vertical channel stream */
+    }
+    .mamaput-services-container {
+        padding: 4rem 1rem;
+    }
+    .culinary-service-card {
+        padding: 2.5rem 2rem;
+    }
+}
+/* ==========================================================================
+   5.0 SECTION 1.5: MULTI-COLUMN STICKY CULINARY OPERATIONS FOOTER
+   ========================================================================== */
+
+/* 5.1 Main Layout: Sticky position configuration permanently visible at viewport base edge */
+.mamaput-footer-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000; /* Layering balance matches sticky menu bar depth perfectly */
+    
+    /* Premium Glassmorphic Layer prevents content occlusion while scrolling */
+    background: rgba(4, 5, 7, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    padding: 1.5rem 2rem 1.25rem 2rem; /* Compact thickness protects screen real estate */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Tight compact vertical spacing */
+}
+
+/* Operational Info Columns: Clean side-by-side horizontal alignment row */
+.footer-columns-split {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Balanced equal split between hours and find us */
+    gap: 3rem;
+    width: 100%;
+}
+
+.footer-info-column {
+    display: flex;
+    flex-direction: row; /* Arranges subtitle label and text side-by-side to save vertical height */
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Monospace Section Headings Labels styling metrics */
+.column-meta-heading {
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #d4af37; /* Gold indicator section tracking token */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* Column 1 Content Stack Layout adjustments */
+.schedule-text-stack {
+    display: flex;
+    gap: 1.5rem; /* Flows hours horizontally instead of vertically stacking */
+}
+
+.schedule-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.day-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.time-value {
+    font-size: 0.85rem;
+    color: #8a8f98;
+}
+
+/* Column 2 Content Stack Layout adjustments */
+.address-text-stack {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.restaurant-address {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: #8a8f98;
+    font-style: normal;
+}
+
+.restaurant-phone-link {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.restaurant-phone-link:hover {
+    color: #ef4444; /* Lights up hot pepper red on click focus hover */
+}
+
+/* 5.2 Baseline Row: Split alignments matching your layout constraints criteria */
+.footer-baseline-split {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-divider-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.baseline-flex-wrapper {
+    display: flex;
+    justify-content: space-between; /* Locks copyright bottom left and social icons bottom right */
+    align-items: center;
+    width: 100%;
+}
+
+.copyright-left-text {
+    font-size: 0.82rem;
+    color: #4b5563; /* Muted corporate legal gray text */
+}
+
+/* Social Vector Link Grid Configurations */
+.social-icon-matrix {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.social-icon-link {
+    color: #4b5563; /* Neutral gray icon base color */
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Pure CSS micro lifting shifts and custom color platform transformations effects */
+.social-icon-link:hover {
+    transform: translateY(-3px) scale(1.15);
+}
+
+.link-twitter:hover   { color: #ffffff; filter: drop-shadow(0 0 6px rgba(255,255,255,0.4)); }
+.link-linkedin:hover  { color: #0a66c2; filter: drop-shadow(0 0 6px rgba(10,102,194,0.4)); }
+.link-instagram:hover { color: #e1306c; filter: drop-shadow(0 0 6px rgba(225,48,108,0.4)); }
+.link-facebook:hover  { color: #1877f2; filter: drop-shadow(0 0 6px rgba(24,119,242,0.4)); }
+
+.icon-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 5.3 SAFETY BUFFER SCREEN OFFSET MARGIN */
+/* Forces general webpage contents to end early preventing blocks from wrapping underneath sticky footer plane boundary */
+body {
+    padding-bottom: 120px; 
+}
+
+/* ==========================================================================
+   5.4 RESPONSIVE ADAPTIVE MOBILE OVERRIDES ENGINE CODES
+   ========================================================================== */
+@media (max-width: 912px) {
+    .mamaput-footer-sticky {
+        position: static; /* Dissolves sticky fixed properties on mobile devices to free up screen real estate */
+        padding: 4rem 1.5rem 2rem 1.5rem;
+    }
+    .footer-columns-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-info-column {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    .schedule-text-stack,
+    .address-text-stack {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .baseline-flex-wrapper {
+        flex-direction: column-reverse; /* Places copyright notice text under the social media vectors row on mobile devices */
+        gap: 1.5rem;
+    }
+    body {
+        padding-bottom: 0;
+    }
+}
+
+
