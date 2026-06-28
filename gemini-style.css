@@ -780,202 +780,262 @@ body {
         padding: 2.5rem 2rem;
     }
 }
-/* ==========================================================================
-   5.0 SECTION 1.5: MULTI-COLUMN STICKY CULINARY OPERATIONS FOOTER
-   ========================================================================== */
-
-/* 5.1 Main Layout: Sticky position configuration permanently visible at viewport base edge */
+/* ==========================================
+   1. MAIN FOOTER CONFIGURATION (SCROLLING)
+   ========================================== */
 .mamaput-footer-sticky {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2000; /* Layering balance matches sticky menu bar depth perfectly */
-    
-    /* Premium Glassmorphic Layer prevents content occlusion while scrolling */
-    background: rgba(4, 5, 7, 0.8);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    
-    padding: 1.5rem 2rem 1.25rem 2rem; /* Compact thickness protects screen real estate */
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  /* Deep Charcoal: Bridges your main dark background and ash cards seamlessly */
+  background-color: #121620; 
+  color: #94a3b8; /* Clean, professional muted silver text */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative; 
+  box-sizing: border-box;
+}
+
+.mamaput-footer-sticky *, 
+.mamaput-footer-sticky *::before, 
+.mamaput-footer-sticky *::after {
+  box-sizing: inherit;
 }
 
 .footer-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem; /* Tight compact vertical spacing */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Operational Info Columns: Clean side-by-side horizontal alignment row */
-.footer-columns-split {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Balanced equal split between hours and find us */
-    gap: 3rem;
-    width: 100%;
+/* ==========================================
+   2. OPERATIONAL COLUMNS STYLING (SCROLLING)
+   ========================================== */
+#section-1-5-1 {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile-first vertical stack */
+  gap: 32px;
+  padding: 48px 24px 90px 24px; /* Space reserved for the fixed bar bottom layout */
 }
 
 .footer-info-column {
-    display: flex;
-    flex-direction: row; /* Arranges subtitle label and text side-by-side to save vertical height */
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* Monospace Section Headings Labels styling metrics */
 .column-meta-heading {
-    font-family: monospace;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #d4af37; /* Gold indicator section tracking token */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    flex-shrink: 0;
+  color: #ffffff; /* High contrast white for readable headers */
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  position: relative;
+  padding-bottom: 8px;
 }
 
-/* Column 1 Content Stack Layout adjustments */
+/* Heading bottom indicator - uses a subtle ash-gray line to match cards */
+.column-meta-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background-color: #475569; /* Balanced ash line */
+}
+
+/* Schedule Rows */
 .schedule-text-stack {
-    display: flex;
-    gap: 1.5rem; /* Flows hours horizontally instead of vertically stacking */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .schedule-row {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Soft, invisible border line */
+  padding-bottom: 8px;
 }
 
 .day-label {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #ffffff;
+  font-weight: 500;
+  color: #cbd5e1; /* Clear white-silver contrast */
 }
 
 .time-value {
-    font-size: 0.85rem;
-    color: #8a8f98;
+  color: #f87171; /* A muted professional soft-red tint matching your header tone */
+  font-weight: 600;
+}
+/* ==========================================
+   FOOTER COLUMN INTRO PARAGRAPH
+   ========================================== */
+.footer-column-intro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #94a3b8; /* Balanced ash/slate silver that mirrors your site cards */
+  margin: 0 0 4px 0; /* Tight margins to keep it beautifully pinned near headings */
+  max-width: 320px; /* Restricts the paragraph from stretching awkwardly on ultra-wide screens */
 }
 
-/* Column 2 Content Stack Layout adjustments */
+/* Minor layout tweak to optimize spacing between elements on mobile devices */
+.block-findus {
+  gap: 14px !important; 
+}
+
+
+/* Address Stack */
 .address-text-stack {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .restaurant-address {
-    font-size: 0.88rem;
-    line-height: 1.4;
-    color: #8a8f98;
-    font-style: normal;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cbd5e1;
 }
 
 .restaurant-phone-link {
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    flex-shrink: 0;
+  color: #ef4444; /* Clean theme-red variant for clickable telephone link */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+.restaurant-email-link {
+  color: #ef4444; /* Clean theme-red variant for clickable email link */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s ease;
 }
 
 .restaurant-phone-link:hover {
-    color: #ef4444; /* Lights up hot pepper red on click focus hover */
+  color: #f87171;
+  text-decoration: underline;
 }
 
-/* 5.2 Baseline Row: Split alignments matching your layout constraints criteria */
-.footer-baseline-split {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* ==========================================
+   3. BASELINE CONFIGURATION (PERMANENTLY FIXED)
+   ========================================== */
+#section-1-5-2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Dark Red/Crimson: Creates a perfect color sandwich with your sticky top nav red */
+  background-color: #991b1b; 
+  z-index: 9999;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .footer-divider-line {
-    width: 100%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.04);
+  display: none; /* Removed old border divider */
 }
 
 .baseline-flex-wrapper {
-    display: flex;
-    justify-content: space-between; /* Locks copyright bottom left and social icons bottom right */
-    align-items: center;
-    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  flex-direction: column; /* Vertical stacking for clean phone displays */
+  align-items: center;
+  gap: 12px;
 }
 
 .copyright-left-text {
-    font-size: 0.82rem;
-    color: #4b5563; /* Muted corporate legal gray text */
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
-/* Social Vector Link Grid Configurations */
+/* Social Icon Matrix Alignment */
 .social-icon-matrix {
-    display: flex;
-    gap: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .social-icon-link {
-    color: #4b5563; /* Neutral gray icon base color */
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  /* Transparent ash background layer on top of the red bar */
+  background-color: rgba(255, 255, 255, 0.12); 
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
-
-/* Pure CSS micro lifting shifts and custom color platform transformations effects */
-.social-icon-link:hover {
-    transform: translateY(-3px) scale(1.15);
-}
-
-.link-twitter:hover   { color: #ffffff; filter: drop-shadow(0 0 6px rgba(255,255,255,0.4)); }
-.link-linkedin:hover  { color: #0a66c2; filter: drop-shadow(0 0 6px rgba(10,102,194,0.4)); }
-.link-instagram:hover { color: #e1306c; filter: drop-shadow(0 0 6px rgba(225,48,108,0.4)); }
-.link-facebook:hover  { color: #1877f2; filter: drop-shadow(0 0 6px rgba(24,119,242,0.4)); }
 
 .icon-svg {
-    width: 100%;
-    height: 100%;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
-/* 5.3 SAFETY BUFFER SCREEN OFFSET MARGIN */
-/* Forces general webpage contents to end early preventing blocks from wrapping underneath sticky footer plane boundary */
+/* Hover & Active Touch Transitions */
+.social-icon-link:hover {
+  background-color: #ffffff; /* Inverts cleanly to white on desktop hover / active click */
+  color: #991b1b; /* Pulls the exact base container dark red into the icon shape */
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   4. IPAD & TABLET RESPONSIVE BREAKPOINT
+   ========================================== */
+@media (min-width: 640px) {
+  #section-1-5-1 {
+    grid-template-columns: repeat(2, 1fr); /* Splits schedules and map addresses side-by-side */
+    gap: 40px;
+    padding: 56px 32px 110px 32px;
+  }
+
+  .baseline-flex-wrapper {
+    flex-direction: row; /* Snaps copy text and icons side-by-side beautifully */
+    justify-content: space-between;
+    padding: 16px 32px;
+    gap: 0;
+  }
+
+  .copyright-left-text {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+/* ==========================================
+   5. DESKTOP RESPONSIVE BREAKPOINT
+   ========================================== */
+@media (min-width: 1024px) {
+  #section-1-5-1 {
+    padding: 64px 40px 130px 40px;
+    gap: 80px;
+  }
+  
+  .baseline-flex-wrapper {
+    padding: 16px 40px;
+  }
+}
+
+/* ==========================================
+   6. GLOBAL BODY PADDING ADJUSTMENTS
+   ========================================== */
 body {
-    padding-bottom: 120px; 
+  padding-bottom: 95px; /* Ensures page details do not hide behind the fixed bar */
 }
-
-/* ==========================================================================
-   5.4 RESPONSIVE ADAPTIVE MOBILE OVERRIDES ENGINE CODES
-   ========================================================================== */
-@media (max-width: 912px) {
-    .mamaput-footer-sticky {
-        position: static; /* Dissolves sticky fixed properties on mobile devices to free up screen real estate */
-        padding: 4rem 1.5rem 2rem 1.5rem;
-    }
-    .footer-columns-split {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .footer-info-column {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-    .schedule-text-stack,
-    .address-text-stack {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .baseline-flex-wrapper {
-        flex-direction: column-reverse; /* Places copyright notice text under the social media vectors row on mobile devices */
-        gap: 1.5rem;
-    }
-    body {
-        padding-bottom: 0;
-    }
+@media (min-width: 640px) {
+  body {
+    padding-bottom: 75px; 
+  }
 }
-
 
