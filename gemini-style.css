@@ -588,7 +588,20 @@ body {
     line-height: 1.5;
     color: #8a8f98; /* Mid grey visibility ratio reading standard text */
 }
+/* Fix: The actual image rules */
+.food-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Stops the image from stretching or looking distorted */
+  object-position: center;
+  filter: none !important; /* Forces any inherited blur to turn off */
+  transition: transform 0.3s ease;
+}
 
+/* Fun Hover Interaction */
+.food-product-card:hover .food-img-placeholder img {
+  transform: scale(1.05); /* Soft zoom effect on your Egusi soup when hovered */
+}
 /* Fallback Unsplash traditional food asset textures headers anchors mapping */
 .cover-egusi       { background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url('https://unsplash.com'); }
 .cover-edikaikong  { background: linear-gradient(135deg, #0f2a1d, #05140e); }
@@ -602,6 +615,7 @@ body {
 .cover-abacha      { background: linear-gradient(135deg, #18262b, #091114); }
 .cover-chicken     { background: linear-gradient(135deg, #3d2112, #1f0f07); }
 .cover-kpomo       { background: linear-gradient(135deg, #2e1026, #140510); }
+
 
 /* ==========================================================================
    3.3 RESPONSIVE ADAPTIVE MOBILE OVERRIDES ENGINE CODES
