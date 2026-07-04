@@ -1,0 +1,69 @@
+dewey numbering classification
+
+
+1.1 = STICKY CULINARY NAVIGATION HEADER WITH INTERACTIVE MENU BAR
+    1.1.1 = TOP ROW BRANDING IDENTITY & UTILITY SEARCH MATRIX
+        1.1.1.1 = Logo Block Branding Identity
+        1.1.1.2 = Interactive Functional Search Bounding Box
+    1.1.2 = LOWER ROW STICKY MENU BAR COMPONENT LAYER
+        1.1.2.1 = Navigation Link Matrix Items (Home, Products, Services, Contact Us)
+
+1.2 = CINEMATIC CULINARY HERO SHOWCASE (VERTICALLY PARTITIONED)
+    1.2.1 = LEFT PANEL - BOLD INVITING TYPOGRAPHY
+        1.2.1.1 = Freshly Prepared & Steaming Hot Mini Badge
+        1.2.1.2 = Main Headline with Gold Gradient Text Accent
+        1.2.1.3 = Traditional Luxury Narrative Paragraph Body Text
+        1.2.1.4 = Primary Order Now Call-To-Action Link Button
+    1.2.2 = RIGHT PANEL - HIGH-RESOLUTION HIGH-PIXEL PORTRAIT IMG
+        1.2.2.1 = Culinary Presentation Image Viewport (Soup)
+        1.2.2.2 = Pure CSS Visual Steaming Effect Layer
+        1.2.2.3 = Image Vignette Mask Visual Overlay
+
+1.3 = PRODUCTS GRID DISPLAY SYSTEM (3-ROW PANEL GRID MATRIX)
+    1.3.1 = LEFT PANEL: CATEGORIES ANCHOR SIDEBAR
+        1.3.1.1 = On-Demand Catering Highlight Sidebar Accent Badge
+        1.3.1.2 = Culinary Blueprint Main Heading & Description
+        1.3.1.3 = Authentic Soups Smooth Scroll Anchor Sidebar Link
+        1.3.1.4 = Rice & Staple Classics Anchor Sidebar Link
+        1.3.1.5 = Traditional Delicacies Anchor Sidebar Link
+    1.3.2 = RIGHT PANEL: THREE BALANCED ROWS DISPLAY PANEL
+        1.3.2.1 = ROW 1: PRESTIGE NIGERIAN SOUPS (4 CARDS)
+            1.3.2.1.1 = Melon Egusi Soup Card + ₦8,500 Price Badge
+            1.3.2.1.2 = Edikaikong Luxury Card + ₦10,000 Price Badge
+            1.3.2.1.3 = Ewedu & Gbegiri Duo Card + ₦5,500 Price Badge
+            1.3.2.1.4 = Traditional Ora Soup Card + ₦9,000 Price Badge
+        1.3.2.2 = ROW 2: STAPLES & RICE CLASSICS (4 CARDS)
+            1.3.2.2.1 = Smokey Jollof Rice Card + ₦6,500 Price Badge
+            1.3.2.2.2 = Artisan Fried Rice Card + ₦7,000 Price Badge
+            1.3.2.2.3 = Asaro Porridge Yam Card + ₦5,000 Price Badge
+            1.3.2.2.4 = Ewa Agoyin Beans Card + ₦4,500 Price Badge
+        1.3.2.3 = ROW 3: TRADITIONAL EVENING DELICACIES (4 CARDS)
+            1.3.2.3.1 = Spiced Nkwobi Bowl Card + ₦8,000 Price Badge
+            1.3.2.3.2 = African Salad Abacha Card + ₦6,000 Price Badge
+            1.3.2.3.3 = Crisp Fried Chicken Card + ₦4,000 Price Badge
+            1.3.2.3.4 = Gizdodo & Kpomo Stack Card + ₦5,000 Price Badge
+
+1.4 = MAMA PUT ONLINE SERVICES REPERTOIRE GRID
+    1.4.1 = CENTERED SECTION IDENTIFICATION HEADER
+        1.4.1.1 = Our Culinary Protocols Section Badge Tag
+        1.4.1.2 = Professional Catering Services Main Title Typography
+        1.4.1.3 = Services Underline Accent Bar Component
+    1.4.2 = RESPONSIVE 3-COLUMN SERVICES HIGHLIGHT CARD GRID
+        1.4.2.1 = Services Card One: Indoor Dining Experience Card
+        1.4.2.2 = Services Card Two: Professional Outdoor & Event Catering Card
+        1.4.2.3 = Services Card Three: Swift Instant Home Delivery Engine Card
+
+1.5 = BALANCED STICKY OPERATIONS FOOTER ASSEMBLY
+    1.5.1 = TOP ROW OPERATIONS DISTRIBUTION MATRIX
+        1.5.1.1 = COLUMN 1: OPENING HOURS LIST (Weekdays & Weekends Schedule)
+        1.5.1.2 = COLUMN 2: PHYSICAL DISTRIBUTION ACCESS DETAILS (Find Us Hub Meta & Address)
+        1.5.1.3 = Dedicated Dispatch Direct Call Phone Link Element (+234123456789)
+        1.5.1.4 = COLUMN 3: EMAIL CONTACT & SUPPORT DETAILS (info@mamaputonline.com)
+    1.5.2 = BASELINE ROW - SPLIT LEVEL LEGAL & ANIMATED SOCIAL NODES
+        1.5.2.1 = Full Width Structural Baseline Divider Line Component
+        1.5.2.2 = Left Aligned Copyright Notice Text Element
+        1.5.2.3 = Right Aligned Pure CSS Animated Social Network Nodes Matrix Container
+            1.5.2.3.1 = Twitter/X Vector SVG Path Anchor Link Element
+            1.5.2.3.2 = LinkedIn Professional Network Vector SVG Path Anchor Link Element
+            1.5.2.3.3 = Instagram Visual Grid Vector SVG Path Anchor Link Element
+            1.5.2.3.4 = Facebook Community Network Vector SVG Path Anchor Link Element

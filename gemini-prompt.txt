@@ -7,6 +7,9 @@ It also sells jollof rice, fried rice, porridge yam, porridge beans, fried plant
 
 i will give you the prompts for each section of the page, are you clear?
 
+
+prompting Property
+
 MENU BAR section
 build the navigation section with MamaPutOnline logo on the top left hand corner and A search window on the very top right hand corner.
       -include a Menu bar in dark red background with these sub titles :Home,Products, Services, Contact Us ,
@@ -41,71 +44,7 @@ Below the columns, add a standard copyright text row at the  bottom left and and
 Ensure all text wraps neatly and spacing looks polished
 make this to be sticky
    
-   DEWEY  CLASSIFICATION
-
-1.0 = MamaPutOnline Dark Elegant Luxury Culinary Landing Page
-
-   1.1 = Sticky Culinary Navigation Header with Interactive Menu Bar Section
-      1.1.1 = Top Row: Brand Identity & Utility Search Matrix
-          1.1.1.1 = Custom Brand Logo Block ("MamaPutOnline" with Gold Glow Accent)
-          1.1.1.2 = Interactive Pill-Shaped Search Bounding Input Box Window
-      1.1.2 = Lower Row: Sticky Menu Bar Component Layer
-          1.1.2.1 = Centralized Horizontal Navigation List Array (Dark Red Background)
-          1.1.2.2 = High-Contrast Flavor Accent Navigation Links Node Mapping
-              1.1.2.2.1 = Home File Anchor Link Node
-              1.1.2.2.2 = Products File Anchor Link Node
-              1.1.2.2.3 = Services File Anchor Link Node
-              1.1.2.2.4 = Contact Us File Anchor Link Node
-
-   1.2 = Cinematic Culinary Hero Showcase Section (Vertically Partitioned)
-      1.2.1 = Left Panel: Bold Inviting Large-Print Typography Block
-          1.2.1.1 = Pepper-Red Culinary Alert Label Badge ("Freshly Prepared & Steaming Hot")
-          1.2.1.2 = Invitation Title Headline with Premium Gold Gradient Focus Text
-          1.2.1.3 = Traditional Narrative Urgency Value Proposition Description Paragraph
-          1.2.1.4 = Hot Pepper-Red High-Contrast "Order Your Bowl Now" Call-to-Action Pill Button
-      1.2.2 = Right Panel: High-Resolution Appetizing Media Portrait Canvas Box Frame
-          1.2.2.1 = Square Matrix Configuration Container Box (Prevents Image Stretching)
-          1.2.2.2 = High-Pixelization Sharp Local Dish Image Asset (Steaming Rich Egusi Soup)
-          1.2.2.3 = Ambient Edge-Smoothing Vignette Boundary Shadow Mask Layer
-          1.2.2.4 = Pure CSS Kinetic Shifting Gradient Steam Haze Simulation Overlay Layer
-
-   1.3 = Products Grid Display System Section (3-Row Panel Grid Matrix Layout)
-      1.3.1 = Left Panel: Sticky Categories Sidebar Anchor Panel
-          1.3.1.1 = Gold Classification Tracking Accent Badge ("On-Demand Catering")
-          1.3.1.2 = Architectural Core Culinary Title Headline and Platform Description
-          1.3.1.3 = High-Contrast Active Track Category Link Anchors Vertical Array Stack
-      1.3.2 = Right Panel: Three-Row Quadruple Axis Product Display Matrix
-          1.3.2.1 = Row 01 Panel: Authentic Steaming Soups (4 Quad Grid Cards)
-              1.3.2.1.1 = Cards 1-4: Melon Egusi, Edikaikong, Ewedu/Gbegiri, and Traditional Ora Soups
-              1.3.2.1.2 = Visual Elements: Food Cover Background Imagery & Pure CSS Hover Zoom Effects
-              1.3.2.1.3 = Overlays: Solid Pepper-Red Floating Local Currency Price Badges (₦)
-              1.3.2.1.4 = Typography Layers: Traditional Item Titles & Detailed Culinary Ingredients Descriptions
-          1.3.2.2 = Row 02 Panel: Rice & Staple Classics (4 Quad Grid Cards)
-              1.3.2.2.1 = Cards 1-4: Smokey Jollof Rice, Artisan Fried Rice, Asaro Yam & Ewa Agoyin Beans Porridges
-              1.3.2.2.2 = Overlays: Solid Pepper-Red Floating Local Currency Price Badges (₦)
-          1.3.2.3 = Row 03 Panel: Traditional Delicacies (4 Quad Grid Cards)
-              1.3.2.3.1 = Cards 1-4: Spiced Nkwobi Bowl, African Salad Abacha, Crisp Chicken & Gizdodo/Kpomo Stack
-              1.3.2.3.2 = Overlays: Solid Pepper-Red Floating Local Currency Price Badges (₦)
-
-   1.4 = Professional Catering Services Repertoire Section (Three-Column Grid)
-      1.4.1 = Centered Section Identification Header Layout Block
-          1.4.1.1 = Pepper-Red Operational Designation Tracker Badge ("Our Culinary Protocols")
-          1.4.1.2 = Main Services Title Header with Shared Gold-to-Red Gradient Underline Accent Bar
-      1.4.2 = Triple Split-Axis Responsive High-Contrast Service Highlight Card Grid
-          1.4.2.1 = Column Card 01: Indoor Dining Experience (Vector Icon, Title, and Hearth-Soup Description)
-          1.4.2.2 = Column Card 02: Outdoor & Event Catering (Vector Icon, Title, and Logistics Description)
-          1.4.2.3 = Column Card 03: Instant Home Delivery (Vector Icon, Title, and Thermal-Cell Description)
-
-   1.5 = Multi-Column Sticky Culinary Operations Footer Section (Glassmorphic Viewport Anchor)
-      1.5.1 = Upper Row Layer: Operational Split Columns Dashboard Distribution Matrix
-          1.5.1.1 = Left Column Block: Monospace Heading and Horizontal Opening Hours Schedule Row Stack
-          1.5.1.2 = Right Column Block: Monospace Heading and Physical Lekki Address/Phone Directory Access Stack
-      1.5.2 = Lower Baseline Row Layer: Split-Level Legal & Animated Social Profile Nodes Grid Array
-          1.5.2.1 = Horizontal Translucent Separator Boundary Divider Strip Line
-          1.5.2.2 = Left-Aligned Corporate Legal Property Notice Text Node (&copy; 2026 MamaPutOnline)
-          1.5.2.3 = Right-Aligned Pure CSS Color-Platform Color Switching Social Icon Vector Links (Twitter, LinkedIn, Instagram, Facebook)
-      1.5.3 = Global Webpage Safety Buffer Screen Bottom Offset Margin Rule
- 
+  
 
 
 
